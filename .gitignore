@@ -1,0 +1,6 @@
+# OS
+*DS_Store*
+
+# Sass cache
+**/.sass-cache/**
+**/.__*.scss
