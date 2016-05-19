@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="css/dropdown.css">
+<link rel="stylesheet" type="text/css" href="http://jangharyeon.github.io/resources/css/doc.css">
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="http://jangharyeon.github.io/resources/js/lib/shCore.js"></script>
+<script src="http://jangharyeon.github.io/resources/js/lib/shBrushJScript.js"></script>
+<script src="js/jquery.dropdown.js"></script>
+
+</head>
+<body>
+
+<h1>jQuery Dropdown</h1>
+
+<hr>
+
+<h2>Selector</h2>
+<ul>
+	<li>Button: <code>data-dropdown="button"</code></li>
+	<li>Panel: <code>data-dropdown="panel"</code></li>
+</ul>
+
+<hr>
+
+<h2>Options</h2>
+<ul>
+	<li>
+		animateSpeed
+		<ul>
+			<li>Type: <code>Number</code></li>
+			<li>Default: <code>150</code></li>
+		</ul>
+	</li>
+	<li>
+		fade
+		<ul>
+			<li>Type: <code>Boolean</code></li>
+			<li>Default: <code>false</code></li>
+		</ul>
+	</li>
+	<li>
+		slide
+		<ul>
+			<li>Type: <code>Boolean</code></li>
+			<li>Default: <code>false</code></li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<h2>Demo</h2>
+<h3>Default</h3>
+<div class="ex example">
+	<div class="ui dropdown" data-id="default">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+	<div class="ui dropdown" data-id="default">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<pre class="brush:js">
+	$('[data-id=default]').dropdown();
+</pre>
+
+<h3>Animate fade option</h3>
+<div class="ex example">
+	<div class="ui dropdown" data-id="fade">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+	<div class="ui dropdown" data-id="fade">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<pre class="brush:js">
+	$('[data-id=fade]').dropdown({
+		animate: 'fade'
+	});
+</pre>
+
+<h3>Animate slide option</h3>
+<div class="ex example">
+	<div class="ui dropdown" data-id="slide">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+	<div class="ui dropdown" data-id="slide">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<pre class="brush:js">
+	$('[data-id=slide]').dropdown({
+		animate: 'slide'
+	});
+</pre>
+
+<h3>Animate speed option</h3>
+<div class="ex example">
+	<div class="ui dropdown" data-id="speed">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+	<div class="ui dropdown" data-id="speed">
+		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
+		<ul class="layer" data-dropdown="panel">
+			<li>
+				<a href="javascript:;">Menu 01</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 02</a>
+			</li>
+			<li>
+				<a href="javascript:;">Menu 03</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<pre class="brush:js">
+	$('[data-id=speed]').dropdown({
+		animateSpeed: 250,
+		animate: 'slide'
+	});
+</pre>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('[data-id=default]').dropdown();
+		$('[data-id=fade]').dropdown({
+			animate: 'fade'
+		});
+		$('[data-id=slide]').dropdown({
+			animate: 'slide'
+		});
+		$('[data-id=speed]').dropdown({
+			animateSpeed: 250,
+			animate: 'slide'
+		});
+
+		SyntaxHighlighter.highlight();
+	});
+</script>
+
+</body>
+</html>
