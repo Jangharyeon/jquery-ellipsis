@@ -5,11 +5,10 @@
 	$.fn.ellipsis = function() {
 		return this.each(function() {
 			var $this = $(this),
-				_text = $this.text(),
 				isOverflow = $this.css('overflow') === 'hidden';
 
 			if (isOverflow) {
-				var text = _text,
+				var text = $this.text(),
 					lh = parseInt($this.css('line-height')),
 					line = $this.attr('data-ellipsis'),
 					maxHeight = lh * line;
@@ -22,8 +21,6 @@
 					}
 				}
 			}
-			console.log(_text);
-			console.log(text);
 		});
 	}
 }(window, jQuery));
