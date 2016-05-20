@@ -2,216 +2,57 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Document</title>
-<link rel="stylesheet" type="text/css" href="css/dropdown.css">
+<title>jQuery Ellipsis</title>
 <link rel="stylesheet" type="text/css" href="http://jangharyeon.github.io/resources/css/doc.css">
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 <script src="http://jangharyeon.github.io/resources/js/lib/shCore.js"></script>
+<script src="http://jangharyeon.github.io/resources/js/lib/shBrushXml.js"></script>
 <script src="http://jangharyeon.github.io/resources/js/lib/shBrushJScript.js"></script>
-<script src="js/jquery.dropdown.js"></script>
+<script src="js/jquery.ellipsis.js"></script>
+
+<style type="text/css">
+.ellipsis {
+	overflow:hidden;
+	font-size:14px;
+	line-height:1.5;
+}
+</style>
 
 </head>
 <body>
 
-<h1>jQuery Dropdown</h1>
+<h1>jQuery Ellipsis</h1>
 
-<hr>
-
-<h2>Selector</h2>
-<ul>
-	<li>Button: <code>data-dropdown="button"</code></li>
-	<li>Panel: <code>data-dropdown="panel"</code></li>
-</ul>
-
-<hr>
-
-<h2>Options</h2>
-<ul>
-	<li>
-		animateSpeed
-		<ul>
-			<li>Type: <code>Number</code></li>
-			<li>Default: <code>150</code></li>
-		</ul>
-	</li>
-	<li>
-		fade
-		<ul>
-			<li>Type: <code>Boolean</code></li>
-			<li>Default: <code>false</code></li>
-		</ul>
-	</li>
-	<li>
-		slide
-		<ul>
-			<li>Type: <code>Boolean</code></li>
-			<li>Default: <code>false</code></li>
-		</ul>
-	</li>
-</ul>
-
-<hr>
+<pre class="brush:js">
+	$('.ellipsis').ellipsis();
+</pre>
 
 <h2>Demo</h2>
-<h3>Default</h3>
+<h3>English</h3>
 <div class="ex example">
-	<div class="ui dropdown" data-id="default">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-	<div class="ui dropdown" data-id="default">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
+	<div class="ellipsis" data-ellipsis="2">
+		The MIT License is a free software license originating at the Massachusetts Institute of Technology (MIT).[1] It is a permissive free software license, meaning that it puts only very limited restriction on reuse and has therefore an excellent license compatibility.[2][3] The MIT license permits reuse within proprietary software provided all copies of the licensed software include a copy of the MIT License terms and the copyright notice. The MIT license is also compatible with many copyleft licenses, such as the GPL; MIT licensed software can be integrated into GPL software, but not the other way around.[4]
 	</div>
 </div>
-<pre class="brush:js">
-	$('[data-id=default]').dropdown();
+<pre class="brush:xml">
+	<div class="ellipsis" data-ellipsis="2"> ... </div>
 </pre>
 
-<h3>Animate fade option</h3>
+<h3>Korean</h3>
 <div class="ex example">
-	<div class="ui dropdown" data-id="fade">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-	<div class="ui dropdown" data-id="fade">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
+	<div class="ellipsis" data-ellipsis="3">
+		JavaScript 와 Java는 여러 면에서 비슷하지만 어떤 면에서는 근본적으로 다릅니다. JavaScript 언어는 Java를 닮았지만 Java의 정적 형지정(typing)과 강한 형 검사가 없습니다. JavaScript는 대부분의 Java 식 구문, 명명 규칙 및 기본적인 흐름 제어 구조를 따릅니다. 그것이 LiveScript에서 JavaScript로 이름이 바뀐 이유였습니다. Java의 선언에 의해 생성되는 클래스의 컴파일-타임 시스템과는 달리, JavaScript는 숫자, 불리언, 그리고 문자열 값을 표현하는 작은 수의 자료 형을 기반으로 한 런타임 시스템을 지원합니다. JavaScript 는 더 일반적인 클래스 기반 객체 모델 대신에 프로토타입 기반 객체 모델을 갖습니다. 프로토타입 기반 모델은 동적 상속을 제공합니다. 즉, 상속된 대상은 각각의 객체에 따라 다양할 수 있습니다. JavaScript는 또한 어떤 특정한 선언을 요구하지 않는 함수도 지원합니다. 함수는 객체의 속성이나, 타입이 느슨하게 형지정된 채 실행되는 메소드가 될 수 있습니다.
 	</div>
 </div>
-<pre class="brush:js">
-	$('[data-id=fade]').dropdown({
-		animate: 'fade'
-	});
-</pre>
-
-<h3>Animate slide option</h3>
-<div class="ex example">
-	<div class="ui dropdown" data-id="slide">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-	<div class="ui dropdown" data-id="slide">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-</div>
-<pre class="brush:js">
-	$('[data-id=slide]').dropdown({
-		animate: 'slide'
-	});
-</pre>
-
-<h3>Animate speed option</h3>
-<div class="ex example">
-	<div class="ui dropdown" data-id="speed">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-	<div class="ui dropdown" data-id="speed">
-		<a href="javascript:;" class="button" data-dropdown="button">dropdown</a>
-		<ul class="layer" data-dropdown="panel">
-			<li>
-				<a href="javascript:;">Menu 01</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 02</a>
-			</li>
-			<li>
-				<a href="javascript:;">Menu 03</a>
-			</li>
-		</ul>
-	</div>
-</div>
-<pre class="brush:js">
-	$('[data-id=speed]').dropdown({
-		animateSpeed: 250,
-		animate: 'slide'
-	});
+<pre class="brush:xml">
+	<div class="ellipsis" data-ellipsis="3"> ... </div>
 </pre>
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('[data-id=default]').dropdown();
-		$('[data-id=fade]').dropdown({
-			animate: 'fade'
-		});
-		$('[data-id=slide]').dropdown({
-			animate: 'slide'
-		});
-		$('[data-id=speed]').dropdown({
-			animateSpeed: 250,
-			animate: 'slide'
+		$('.ellipsis').ellipsis();
+		$(window).resize(function() {
+			$('.ellipsis').ellipsis();
 		});
 
 		SyntaxHighlighter.highlight();
